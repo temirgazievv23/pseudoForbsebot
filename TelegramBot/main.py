@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot(bot.token)
+bot = telebot.TeleBot('1441937797:AAH4yb0pEysU9Rm_HBolmP6owKK8aiRFkWM')
 
 
 @bot.message_handler(commands=["start"])
@@ -50,7 +50,7 @@ def mainmen(m):
         bot.send_photo(m.chat.id, 'http://prntscr.com/w12jz3.png')
         bot.send_message(m.chat.id,
                          '''Age *71*
-Source of wealth *Walmart*
+Source of wealth [Walmart](https://www.walmart.com)
 Self-made score *1*
 Philantrophy score *2*
 Residence *Fort Worth, Texas*
@@ -61,7 +61,7 @@ Education *Bachelor of Arts/Science, Trinity University*''',
         bot.send_photo(m.chat.id, 'http://prntscr.com/w12l17.png')
         bot.send_message(m.chat.id,
                          '''Age *67*
-Source of wealth *L'Oreal*
+Source of wealth [L'Oreal](https://www.loreal.com/fr/)
 Residence *Paris, France*
 Citizenship *France*''',
                          parse_mode='Markdown')
@@ -69,7 +69,7 @@ Citizenship *France*''',
         bot.send_photo(m.chat.id, 'http://prntscr.com/w12lxh.png')
         bot.send_message(m.chat.id,
                          '''Age *58*
-Source of wealth *Koch Industries*
+Source of wealth [Koch Industries](https://www.kochind.com)
 Self-made score *1*
 Philantrophy score *2*
 Residence *New York*
@@ -79,7 +79,7 @@ Citizenship *USA*''',
         bot.send_photo(m.chat.id, 'http://prntscr.com/w12mhx.png')
         bot.send_message(m.chat.id,
                          '''Age *50*
-Source of wealth *Amazon*
+Source of wealth [Amazon](https://www.amazon.com)
 Self-made score *3*
 Philantrophy score *2*
 Residence *Seattle, Washington*
@@ -109,7 +109,7 @@ Education *Bachelor of Arts/Science, Ohio State University*''',
         bot.send_photo(m.chat.id, 'http://prntscr.com/w12oct.png')
         bot.send_message(m.chat.id,
                          '''Age *58*
-Source of wealth *BMW, pharmaceuticals*
+Source of wealth [BMW](https://www.bmw.com/de), *pharmaceuticals*
 Residence *Bad Homburg, Germany*
 Citizenship *Germany*
 Education *Master of Business Administration, 
@@ -119,7 +119,7 @@ International Institute for Management and Development*''',
         bot.send_photo(m.chat.id, 'http://prntscr.com/w12p5e.png')
         bot.send_message(m.chat.id,
                          '''Age *57*
-Source of wealth *Apple, Disney*
+Source of wealth [Apple](https://www.apple.com), [Disney](https://www.disney.com)
 Self-made score *2*
 Philantrophy score *1*
 Residence *Palo Alto, California*
@@ -151,17 +151,20 @@ Citizenship *Australia*''',
         keyboard.row('Warren Buffet', 'Larry Elisson', 'Larry Page', 'Mukesh Ambani')
         keyboard.row('Main menu')
         bot.send_message(m.chat.id,
-                         '''1. *Jeff Bezos* $182.2B 
-2. *Bernard Arnault & family* $146.5B
-3. *Elon Musk* $136.9B
-4. *Bill Gates* $118.8B
-5. *Mark Zuckergerg* $100.5B
-6. *Waren Buffet* $86.6B
-7. *Larry Elisson* $82.4B
-8. *Larry Page* $78.3B
-9. *Mukesh Ambani* $76.4B
-10. *Sergei Brin* $76.0B''',
+                         '''1. [Jeff Bezos](https://www.forbes.com/profile/jeff-bezos/?list=rtb/&sh=512e93ce1b23) *$182.2B* 
+2. [Bernard Arnault & family](https://www.forbes.com/profile/bernard-arnault/?list=rtb/&sh=23f26c4e66fa) *$146.5B*
+3. [Elon Musk](https://www.forbes.com/profile/elon-musk/?list=rtb/&sh=7752702e7999) *$136.9B*
+4. [Bill Gates](https://www.forbes.com/profile/bill-gates/?list=rtb/&sh=50c27be9689f) *$118.8B*
+5. [Mark Zuckergerg](https://www.forbes.com/profile/mark-zuckerberg/?list=rtb/&sh=758286c93e06) *$100.5B*
+6. [Waren Buffet](https://www.forbes.com/profile/warren-buffett/?list=rtb/&sh=791294d04639) *$86.6B*
+7. [Larry Elisson](https://www.forbes.com/profile/larry-ellison/?list=rtb/&sh=3f92999924c2) *$82.4B*
+8. [Larry Page](https://www.forbes.com/profile/larry-page/?list=rtb/&sh=3bf29df57893) *$78.3B*
+9. [Mukesh Ambani](https://www.forbes.com/profile/mukesh-ambani/?list=rtb/&sh=68a34c11214c) *$76.4B*
+10. [Sergei Brin](https://www.forbes.com/profile/sergey-brin/?list=rtb/&sh=582353824b43) *$76.0B*''',
                          parse_mode='Markdown', reply_markup=keyboard)
+        bot.send_message(m.chat.id,
+                         '_Note: Names are clickable, press them to go to the one\'s Forbes profile_',
+                         parse_mode='Markdown')
     elif m.text.lower() == 'jeff bezos':
         bot.send_photo(m.chat.id, 'http://prntscr.com/w124x7.png')
         bot.send_message(m.chat.id,
